@@ -1,11 +1,9 @@
 !(function(d){
-d.addEventListener('DOMContentLoaded', function(){
     var itemClassName = "carousel__photo";
         items = d.getElementsByClassName(itemClassName),
         totalItems = items.length,
         slide = 0,
         moving = true; 
-    ;
         function setInitialClasses() {
             items[totalItems - 1].classList.add("prev");
             items[0].classList.add("active");
@@ -20,10 +18,10 @@ d.addEventListener('DOMContentLoaded', function(){
         }
         function disableInteraction() {
             moving = true;
-    
             setTimeout(function(){
                 moving = false
             }, 500);
+
         }
         function moveCarouselTo(slide){
             if (!moving) {
@@ -85,9 +83,7 @@ d.addEventListener('DOMContentLoaded', function(){
     
             moving = false;
         }
-        initCarousel();
-
-})    
+        initCarousel(); 
 }(document));
 
 
